@@ -63,7 +63,7 @@ Set `DEVELOPMENT=True` to divert all messages to `CHANNEL_ID`
 2. Start docker
 3. Open command windows in the root directory
    1. ```docker build -t genshin-artifact-rater .```
-   2. ```docker run -d -it --restart unless-stopped --name genshin-artifact-rater --mount type=bind,source="$(pwd)",target=/app/db genshin-artifact-rater ```
+   2. ```docker run -d -it --restart unless-stopped --name genshin-artifact-rater --mount type=bind,source="$(pwd)/db",target=/app/db genshin-artifact-rater ```
 4. This will use the database file from the host machine. If you delete the docker container the db wont be lost.
 
 ## 2.2. Run the bot
