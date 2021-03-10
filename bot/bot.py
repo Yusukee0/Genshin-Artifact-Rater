@@ -233,9 +233,11 @@ async def sets(ctx):
 		try:
 			response, user = await bot.wait_for('reaction_add', check=lambda r, u: r.emoji in ['◀️', '▶️'] and u == ctx.message.author, timeout=180.0)
 			if response.emoji == '◀️':
+                await msg.remove_reaction('◀️', ctx.message.author)
 				if index - 10 >= 0:
 					index -= 10
 			elif response.emoji == '▶️':
+				await msg.remove_reaction('▶️', ctx.message.author)
 				if index + 10 < len(presets):
 					index += 10
 		except asyncio.TimeoutError:
