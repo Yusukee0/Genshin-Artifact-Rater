@@ -59,6 +59,7 @@ Set a Discord `CHANNEL_ID=<id>` to receive messages when the bot goes up/down \
 Set `DEVELOPMENT=True` to divert all messages to `CHANNEL_ID`
 
 ### 2.1.2. Run in docker
+0. On windows install WSL2 (you dont need the ubuntu part): https://docs.microsoft.com/en-us/windows/wsl/install-win10
 1. Install docker: https://www.docker.com/products/docker-desktop
 2. Start docker
 3. Open command windows in the root directory
